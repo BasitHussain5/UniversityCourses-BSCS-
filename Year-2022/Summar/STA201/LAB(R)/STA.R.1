@@ -1,0 +1,61 @@
+# Q. 01
+# Creating a vector
+vector <- c(90,178,547,453,189,377,264,333,289,391,320,300,210,310,121,154,248,292,368,423)
+print(vector)
+# Finding Mean
+result.mean <- mean(vector)
+print(result.mean)
+# Finding Median
+result.median <- median(vector)
+print(result.median)
+# Finding Standard Deviation
+result.sd <- sd(vector)
+print(result.sd)
+# (ii)
+# Find square root of all values
+for (i in vector)
+  print(sqrt(i))
+# (iii)
+# Sort the values
+result.sort <- sort(vector)
+print(result.sort)
+# (iv)
+# Find the length of the vector
+result.length = length(vector)
+print(result.length)
+# (v)
+# Find summation and product of all values
+result.sum = sum(vector)
+print(result.sum)
+result.pro = prod(vector)
+print(result.pro)
+
+
+
+
+# Q. 2:
+Number.of.Rooms <- c(12,9,14,6,10)
+kwh <- c(9,7,10,5,8)
+df <- data.frame(Number.of.Rooms, kwh)
+print(df)
+
+# (i)
+
+pcc <- cor(df$Number.of.Rooms, df$kwh, method = "pearson" )
+print(pcc)
+
+# (ii)
+
+erc <- lm(Number.of.Rooms~kwh, data = df)
+print(erc)
+
+
+# (iii)
+
+plot(x = df$kwh,y = df$Number.of.Rooms,
+     xlab = "kwh",
+     ylab = "Number.of.Rooms",
+     main = "kwh vs Number of Rooms"
+)
+
+
